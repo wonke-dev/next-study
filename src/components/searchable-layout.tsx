@@ -8,7 +8,7 @@ export default function SearchableLayout({
   children: ReactNode;
 }) {
   const router = useRouter();
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
 
   const q = router.query.q as string;
 
