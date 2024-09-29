@@ -19,7 +19,6 @@ export const getStaticProps = async () => {
       allBooks,
       recoBooks,
     },
-    revalidate: 3, // 재검증,재생성
   };
 };
 
