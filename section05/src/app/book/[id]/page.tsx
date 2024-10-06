@@ -2,7 +2,7 @@ import { BookData } from "@/types";
 import style from "./page.module.css";
 import { notFound } from "next/navigation";
 
-// export const dynamicParams = true;
+// export const dynamicParams = true; // 라우스 세그먼트 옵션
 
 export function generateStaticParams() {
   return [{ id: "1" }, { id: "2" }, { id: "3" }]; //book/1 , book/2, book/3 을 빌드타임에 만들게 된다.

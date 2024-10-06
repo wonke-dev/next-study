@@ -1,6 +1,8 @@
 import BookItem from "@/components/book-item";
 import { BookData } from "@/types";
 
+// export const dynamic = "error";
+
 export default async function Page({
   searchParams,
 }: {
