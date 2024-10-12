@@ -1,7 +1,7 @@
 "use client";
 
 import style from "./review-editor.module.css";
-import { createReviewAction } from "@/actions/create-review-action";
+import { createReviewAction } from "@/actions/create-review.action";
 import { use, useActionState, useEffect } from "react";
 
 export function ReviewEditor({ bookId }: { bookId: string }) {
