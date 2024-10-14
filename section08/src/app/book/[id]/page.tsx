@@ -8,8 +8,18 @@ import { Metadata } from "next";
 
 // export const dynamicParams = true; // 라우스 세그먼트 옵션
 
-export function generateStaticParams() {
-  return [{ id: "1" }, { id: "2" }, { id: "3" }]; //book/1 , book/2, book/3 을 빌드타임에 만들게 된다.
+export async function generateStaticParams() {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_SERVER_URL}/book`
+  );
+  if (!response.ok) {
+    throw new Error(response.statusText);
+  }
+
+  const books: BookData[] = await response.json();
+  return books.map((book) => ({
+    id: book.id.toString(),
+  }));
 }
 
 async function BookDetail({ bookId }: { bookId: string }) {
