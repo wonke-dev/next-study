@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "한입 북스",
     description: "한입 북스에 등록한 도서를 만나보세요",
-    images: ["/thumnail.png"],
+    images: ["/thumbnail.png"],
   },
 };
 
